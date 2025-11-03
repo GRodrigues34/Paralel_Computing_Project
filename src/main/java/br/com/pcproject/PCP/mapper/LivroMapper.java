@@ -14,7 +14,6 @@ public class LivroMapper {
         Livro livro = new Livro();
 
         livro.setName(livroDTO.getName());
-        livro.setId(livroDTO.getId());
         livro.setAuthor(livroDTO.getAuthor());
         livro.setPrice(livroDTO.getPrice());
         livro.setQuantity(livroDTO.getQuantity());
