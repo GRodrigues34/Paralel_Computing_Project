@@ -9,9 +9,6 @@ import jakarta.validation.constraints.NotNull;
 @Setter
 public class LivroDTO {
 
-    @NotNull(message = "Id required")
-    private Integer id;
-
     @NotEmpty(message = "Name required")
     private String name;
 
