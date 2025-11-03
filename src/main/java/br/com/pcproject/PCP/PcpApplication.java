@@ -1,4 +1,4 @@
-package br.com.pcproject.PCP.service;
+package br.com.pcproject.PCP;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

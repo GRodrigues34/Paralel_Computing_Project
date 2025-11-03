@@ -12,7 +12,9 @@ import java.io.*;
 @Getter
 @Setter
 public class Livro {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(name = "book_name", length = 100)
