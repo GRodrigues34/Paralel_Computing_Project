@@ -32,4 +32,5 @@ public class Livro {
     @Column(name = "book_quantity")
     private Integer quantity;
 
+
 }
