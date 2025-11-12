@@ -32,5 +32,8 @@ public class Livro {
     @Column(name = "book_quantity")
     private Integer quantity;
 
+    @ManyToMany(mappedBy = "carrinho", fetch = FetchType.LAZY)
+    private List<User> users = new ArrayList<>();
+
 
 }

@@ -20,11 +20,15 @@ public class UserMapper {
         for(Livro livro: userDTO.getCarrinho()){
            user.getCarrinho().add(livro);
         }
+        return user;
 
-        for(Livro livro: user.getLivrosObtidos()){
+    /*    for(Livro livro: user.getLivrosObtidos()){
             user.getLivrosObtidos().add(livro);
         }
         return user;
+     */
+
     }
+
 
 }
