@@ -26,14 +26,12 @@ public class User {
     @Column
     private String password;
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany
     @JoinTable(
-            name = "usuario_carrinho_livros", // 1. Nome da nova tabela de junção
-            joinColumns = @JoinColumn(name = "user_id"),      // 2. Coluna que referencia ESTA classe (User)
-            inverseJoinColumns = @JoinColumn(name = "livro_id") // 3. Coluna que referencia a OUTRA classe (Livro)
+            name = "tb_user_book",
+            joinColumns = @JoinColumn(name = "book_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id")
     )
     private List<Livro> carrinho = new ArrayList<>();
 
-    @ManyToMany(mappedBy = "LivrosObtidos")
-    private List<Livro> livrosObtidos = new ArrayList<>();
 }

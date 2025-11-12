@@ -8,6 +8,8 @@ import br.com.pcproject.PCP.repository.UserRepository;
 import br.com.pcproject.PCP.model.Livro;
 import br.com.pcproject.PCP.mapper.UserMapper;
 
+import java.util.List;
+
 
 @Service
 public class UserService {
@@ -37,6 +39,10 @@ public class UserService {
         return null;
     }
 
+    public List<User> getAllUsers(){
+        return userRepository.findAll();
+    }
+
     public User saveUserByDTO(UserDTO userDTO){
         return addUser(userMapper.toUser(userDTO));
     }
@@ -49,13 +55,14 @@ public class UserService {
         }
     }
 
-    public void addToObtained(Livro livro, User user){
+   /* public void addToObtained(Livro livro, User user){
         try{
             user.getLivrosObtidos().add(livro);
         } catch(Exception e){
             System.out.println("Livro não adicionado a coleção: " + e.getMessage());
         }
     }
+    */
 
 
 }

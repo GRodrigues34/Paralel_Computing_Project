@@ -40,6 +40,14 @@ public class LivroService {
         return false;
     }
 
+    public List<Livro> getAllLivros(){
+        return livroRepository.findAll();
+    }
+
+    public Optional<Livro> getLivroById(int id){
+        return livroRepository.findById(id);
+    }
+
     public Livro saveLivroByDTO(LivroDTO livroDTO){
         return saveLivro(livroMapper.toLivro(livroDTO));
     }
